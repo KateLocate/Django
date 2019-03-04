@@ -1,0 +1,33 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title|title }}
+{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <div id="greeting">
+            <h2>Welcome to <br> 'My&nbsp;Pro-fashion' shop</h2>
+            <h3>High-quality dresses for our cute ladies </h3>
+            <h3>Sophisticated look for formal as well as informal parties</h3>
+            <h3>Enjoy your shopping :)</h3>
+        </div>
+        <div class="icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f fa-1x"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube fa-1x"></i></a>
+            <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p fa-1x"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
+        </div>
+        <div id="stock">
+            <h2>TOP_SALE {% now "d/m/Y" %}</h2>
+            <h3>discounts up to 50%</h3>
+            <h3>more than 50 items</h3>
+        </div>
+        <div class="stockButton">
+            <a href="{% url 'main:catalogue' %}"><h5>START SHOPPING</h5></a>
+        </div>
+    </div>
+    {% include 'mainapp/includes/inc__insta.html' %}
+{% endblock %}

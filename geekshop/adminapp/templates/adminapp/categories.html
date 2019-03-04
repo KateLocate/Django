@@ -1,0 +1,30 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div class="categories_list">
+		<a href="{#% url 'admin:category_create' %#}" class="btn btn-success">create category</a>
+		{% for object in objects %}
+			<div class="category_record {% if not object.is_active %}not_active{% endif %}">
+				<div class="category_name">
+					<h2>{{ object.name|title }}</h2>
+				</div>
+				<div class="category_actions">
+					<a href="{% url 'admin:catalogue' object.pk %}" class="btn btn-success">
+						products in category
+					</a>
+					<a href="{% url 'admin:category_update' object.pk %}" class="btn btn-success">
+						edit
+					</a>
+					<a href="{% url 'admin:category_delete' object.pk %}" class="btn btn-success">
+						remove
+					</a>
+				</div>
+				<div class="category_desc">
+					{{ object.description|title }}
+				</div>
+			</div>
+		{% endfor%}
+	</div>
+{% endblock %}

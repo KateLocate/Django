@@ -1,0 +1,40 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="main">
+        <div class="left">
+            <div class="about button">
+                <a href="{% url 'main:products_in_category' 0 %}"
+                   class="{% if request.resolver_match.kwargs.category_pk == '0' %}active{% endif %}">
+                    <h4>all products</h4>
+                </a>
+            </div>
+            {% for item in category_links %}
+                <div class="catalogue button">
+                    <a href="{% url 'main:products_in_category' item.pk %}"
+                        class="{% if request.resolver_match.kwargs.category_pk|add:0 == item.pk %}active{% endif %}">
+                        <h4>{{item.name}}</h4>
+                    </a>
+                </div>
+            {% endfor %}
+            <img src="{% static '/images/products/Actress_Martha_Higareda.jpg' %}">
+        </div>
+        <div class="product_right">
+            <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+            <div class="description">
+                <h3 class="big-bold">{{ product.name }}</h3>
+                <p class="price"> {{ product.price }} <span>USD</span></p>
+                <a href="{% url 'basket:add' product.pk %}" class="buy-button">
+                    <h3>buy
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </h3>
+                </a>
+                <div class="description-text">
+                    {{ product.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

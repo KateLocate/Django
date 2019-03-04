@@ -1,0 +1,40 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% load my_tags %}
+
+{% block content %}
+    <div class="products_list">
+		{% for object in objects %}
+			<div class="product_record {% if not object.is_active %} not_active {% endif %}">
+				<img src="/media/{{ object.image|media_folder_products }}" alt="{{ object.name }}">
+				<div class="product_name">
+					{{ object.name|title }}
+				</div>
+				<div class="product_actions">
+					<a href="{% url 'admin:product_read' object.pk %}" class="btn btn-success">
+						details
+					</a>
+					<a href="{% url 'admin:product_update' object.pk %}" class="btn btn-success">
+						edit
+					</a>
+					<a href="{#% url 'admin:product_delete' object.pk %#}" class="btn btn-success">
+						remove
+					</a>
+				</div>
+				<div class="summary">
+					<b>price</b>
+					<p>{{ object.price }} USD</p>
+					<b>quantity</b>
+					<p>{{ object.quantity }}</p>
+				</div>
+				<div class="product_desc">
+					{{ object.short_desc|title }}
+				</div>
+			</div>
+		{% endfor%}
+		<a href="{#% url 'admin:product_create' category.pk %#}" class="btn btn-success">
+			create product
+		</a>
+	</div>
+{% endblock %}

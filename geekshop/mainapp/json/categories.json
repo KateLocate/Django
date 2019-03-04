@@ -1,0 +1,18 @@
+[
+    {
+        "name": "formal",
+        "description": "wear it in office or at the corporate party"
+    },
+	{
+        "name": "sale",
+        "description": "discounts here"
+    },
+	{
+        "name": "customers_choice",
+        "description": "best products as ladies say"
+    },
+    {
+        "name": "informal",
+        "description": "any evening dress you may like"
+    }
+]

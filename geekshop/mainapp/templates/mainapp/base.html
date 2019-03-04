@@ -1,0 +1,140 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+		{% block title %}
+		{% endblock %}
+	</title>
+	{% block css %}
+		<link rel="stylesheet" href="{% static '/fonts_icons/fontawesome-free-5.3.1-web/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static '/style/style.css' %}">
+	{% endblock %}
+	{% block js %}
+	{% endblock %}
+</head>
+<body>
+	<div class="headerMain">
+		{% block menu %}
+                <div id="logo">
+                    <a href="{% url 'main:index' %}"><img src="{% static '/images/blue.png' %}" alt="logo">
+                        <p>MY<br>PRO-FASHION</p></a>
+                </div>
+                {% include 'mainapp/includes/inc__menu.html' %}
+                <div class="icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f fa-1x"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube fa-1x"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p fa-1x"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
+                </div>
+		{% endblock %}
+
+		{% block content %}
+		{% endblock %}
+	</div>
+
+	{% block footer %}
+		<div class="footer">
+            <div class="map">
+                <div id="category">
+                    <h2>Category</h2>
+                    <a href="{% url 'main:index' %}">
+                        <p>Home</p>
+                    </a>
+                    <a href="#">
+                        <p>About us</p>
+                    </a>
+                    <a href="{% url 'main:catalogue' %}">
+                        <p>Eshop</p>
+                    </a>
+                    <a href="#">
+                        <p>Features</p>
+                    </a>
+                    <a href="{% url 'main:catalogue' %}">
+                        <p>New collections</p>
+                    </a>
+                    <a href="#">
+                        <p>Blog</p>
+                    </a>
+                    <a href="{% url 'main:contacts' %}">
+                        <p>Contacts</p>
+                    </a>
+                </div>
+                <div id="our_account">
+                    <h2>Our Account</h2>
+                    <a href="#">
+                        <p>Your Account</p>
+                    </a>
+                    <a href="#">
+                        <p>Personal Information</p>
+                    </a>
+                    <a href="#">
+                        <p>Addresses</p>
+                    </a>
+                    <a href="#">
+                        <p>Discount</p>
+                    </a>
+                    <a href="#">
+                        <p>Orders history</p>
+                    </a>
+                    <a href="#">
+                        <p>Addresses</p>
+                    </a>
+                    <a href="#">
+                        <p>Search Terms</p>
+                    </a>
+                </div>
+                <div id="our_support">
+                    <h2>Our Support</h2>
+                    <a href="#">
+                        <p>Site Map</p>
+                    </a>
+                    <a href="#">
+                        <p>Search Terms</p>
+                    </a>
+                    <a href="#">
+                        <p>Advanced Search</p>
+                    </a>
+                    <a href="#">
+                        <p>Mobile</p>
+                    </a>
+                    <a href="#">
+                        <p>Contact us</p>
+                    </a>
+                    <a href="#">
+                        <p>Mobile</p>
+                    </a>
+                    <a href="#">
+                        <p>Adresses</p>
+                    </a>
+                </div>
+                <div id="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>Join thousands of people subscribe to our news</p>
+                    <input type="text" size="20" placeholder="INSERT EMAIL">
+                    <input type="submit" value="SUBMIT">
+                </div>
+                <div id="about_us">
+                    <h2> About us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, atque consequatur culpa
+                        earum hic libero mollitia necessitatibus nobis porro velit.</p>
+                    <h3>Phone: 8-158-198-200</h3>
+                    <h3>Email: info@pro-fashion.com</h3>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>&#169; {% now "Y" %} MY PRO-FASHION All rights reserved</p>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="https://tumblr.com" target="_blank"><i class="fab fa-tumblr fa-lg"></i></a>
+                <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://google.com" target="_blank"><i class="fab fa-google-plus-g fa-lg"></i></a>
+                <a href="https://google.com" target="_blank"><i class="fas fa-rss fa-lg"></i></a>
+            </div>
+        </div>
+	{% endblock %}
+</body>
+</html>

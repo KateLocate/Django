@@ -1,0 +1,64 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title|title }}
+{% endblock %}
+
+{% block content %}
+    <!--<div>{#{ request.resolver_match }#}</div>-->
+    <div class="main">
+        <div class="left">
+            <div class="about button">
+                <a href="{% url 'main:products_in_category' 0 %}"
+                   class="{% if request.resolver_match.kwargs.category_pk == '0' %}active{% endif %}">
+                    <h4>all products</h4>
+                </a>
+            </div>
+            {% for item in category_links %}
+                <div class="catalogue button">
+                    <a href="{% url 'main:products_in_category' item.pk %}"
+                        class="{% if request.resolver_match.kwargs.category_pk|add:0 == item.pk %}active{% endif %}">
+                        <h4>{{item.name}}</h4>
+                    </a>
+                </div>
+            {% endfor %}
+            <img src="{% static '/images/products/Actress_Martha_Higareda.jpg' %}">
+        </div>
+        <div class="right">
+            <h1>Catalogue</h1>
+            {% if category_pk %}
+                <div class="paginator">
+					{% if products.has_previous %}
+						<a href="{% url 'main:page' category_pk products.previous_page_number %}"><</a>
+					{% endif %}
+					<span class="current">
+					page {{ products.number }} of {{ products.paginator.num_pages }}
+					</span>
+					{% if products.has_next %}
+						<a href="{% url 'main:page' category_pk products.next_page_number %}">></a>
+					{% endif %}
+				</div>
+                {% for product in products %}
+                    <div class="product">
+                        <a href="{% url 'main:product' product.pk %}">
+                            <img src="/media/{{ product.image }}">
+                            <br>
+                            <p>{{ product.name }} <br>{{ product.price }} USD</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+                {% for product in same_products %}
+                    <div class="product">
+                        <a href="{% url 'main:product' product.pk %}">
+                            <img src="/media/{{ product.image }}">
+                            <br>
+                        <p>{{ product.name }} <br>{{ product.price }} USD</p>
+                        </a>
+                    </div>
+                {% endfor %}
+        </div>
+        {% include 'mainapp/includes/inc__insta.html' %}
+    </div>
+{% endblock %}

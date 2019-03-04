@@ -1,0 +1,74 @@
+[
+    {
+        "category": "sale",
+        "name": "KATALEA BLACK SHORT DRESS",
+        "image": "products_images/44140d77cb053a55a5018e1d6f99df6513bab0d2_CLQ9603_1.jpg",
+        "short_desc": "KATALEA BLACK TWIST FRONT SILKY SHORT DRESS",
+        "description": "100% Polyester, Length Approx 80cm/31.5' (Based on a sample size UK 8). Model wears size UK 8, model Height - 5ft 9.5' ",
+        "price": "28.00",
+        "quantity": "17"
+    },
+    {
+        "category": "sale",
+        "name": "EMERALD GREEN MAXI DRESS",
+        "image": "products_images/cc94fcd656c080dfdb4be7f388a3415c256e8eb8_cma5101_1.jpg",
+        "short_desc": "EMERALD GREEN VELVET KNOT FRONT MAXI DRESS",
+        "description": "100% Polyester. Length approx 162.5cm/64' (Based on a sample size UK 6). Model wears size UK 6/ EU 34/ AUS 6/ US 2, Model Height - 5ft 9' ",
+        "price": "25.00",
+        "quantity": "21"
+    },
+    {
+        "category": "formal",
+        "name": "DARK RED MIDI DRESS",
+        "image": "products_images/7a9681d79467565686e62fa94433cf80324d4ff6_clz0812_1.jpg",
+        "short_desc": "DARK RED FRILL HEM BANDAGE MIDI DRESS",
+        "description": "90% Polyester 10% Elastane. Length approx 87cm/34' (Based on a sample size UK 6). Model wears size UK 6/ EU 34/ AUS 6/ US 2, Model Height - 5ft 8' ",
+        "price": "45.00",
+        "quantity": "7"
+    },
+    {
+        "category": "formal",
+        "name": "GREY MIDI DRESS",
+        "image": "products_images/bfad7e8cfcd04a386d9bd8e312b5358f70184a35_clv3836_1.jpg",
+        "short_desc": "GREY STRIPED MIDI DRESS",
+        "description": "95% Polyester 5% Elastane. Length approx 88cm/35' (Based on a sample size UK 8). Model wears size UK 8/ EU 36/ AUS 8/ US 4, Model Height - 5ft 8' ",
+        "price": "10.00",
+        "quantity": "7"
+    },
+    {
+        "category": "informal",
+        "name": "PINK MIDI DRESS",
+        "image": "products_images/135b5883f3f9921456cd9adb4929d3811b324b68_clz7258_1.jpg",
+        "short_desc": "PINK SEQUIN BLOCK SQUARE NECK MIDI DRESS",
+        "description": "Mixed Fibres. Length approx 105cm/41.5' (Based on a sample size UK 6). Model wears size UK 6/ EU 34/ AUS 6/ US 2, Model Height - 5ft 8' ",
+        "price": "50.00",
+        "quantity": "7"
+    },
+    {
+        "category": "informal",
+        "name": "BLACK MAXI DRESS",
+        "image": "products_images/ff4e1277955513814c828f9791de5e17a4083871_CLZ8416_1.jpg",
+        "short_desc": "BLACK HIGH NECK CUT OUT MAXI DRESS",
+        "description": "100% Polyester. Length approx 144cm/56.5' (Based on a sample size UK 6). Model wears size UK 6/ EU 34/ AUS 6/ US 2. Model Height - 5ft 9' ",
+        "price": "25.00",
+        "quantity": "27"
+    },
+    {
+        "category": "customers_choice",
+        "name": "NUDE SATIN DRESS",
+        "image": "products_images/651e1be5d8116baf05b101df3f17ce768929d82b_CLU9954_1.jpg",
+        "short_desc": "NUDE SATIN LONG SLEEVE WRAP DRESS",
+        "description": "100% Polyester. Length approx 86cm/34' (Based on a sample size UK 8). Model wears size UK 8/ EU 36/ AUS 8/ US 4. Model Height - 5ft 8' ",
+        "price": "30.00",
+        "quantity": "9"
+    },
+    {
+        "category": "customers_choice",
+        "name": "ROSE MINI DRESS",
+        "image": "products_images/49c089828cd22d15590957485ab4a42f452a8699_CLS1323_1.jpg",
+        "short_desc": "ROSE GOLD SEQUIN CHAIN CHOKER MINI DRESS",
+        "description": "100% Polyester. Length approx 89cm/35' (Based on a sample size UK 8). Model wears size UK 8/ EU 36/ AUS 8/ US 4, Model Height - 5ft 8' ",
+        "price": "40.00",
+        "quantity": "18"
+    }
+]

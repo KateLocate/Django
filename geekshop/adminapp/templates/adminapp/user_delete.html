@@ -1,0 +1,16 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="product_delete">
+        Do you really want to delete <strong>{{ object.username }}</strong>?
+        <form method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="delete">
+        </form>
+        <a href="{% url 'admin:index' %}" class="btn btn-success">
+            cancel
+        </a>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title|title }}
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="left">
+            <img src="{% static '/images/products/Actress_Martha_Higareda.jpg' %}">
+        </div>
+        <div class="right">
+            <h1>Our Contacts</h1>
+            {% for contacts in contact %}
+                <iframe src="{{ contacts.map }}"
+                        width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <p><b>Address:</b> {{ contacts.address }}</p>
+                <p><b>Call Us:</b> {{ contacts.phone }}</p>
+                <p><b>Email:</b> {{ contacts.email }}</p>
+            {% endfor %}
+            <h1>Contact Us</h1>
+            <form action="#" method="post">
+                <p>Your name:</p>
+                <input id="text_template" type="text" size="30" placeholder="Ann Thomas">
+                <p>Email:</p>
+                <input type="text" size="30" placeholder="123456@mail.ru">
+                <p>How can we help you?:</p>
+                <textarea cols="60" rows="15"></textarea>
+                <br>
+                <input type="submit" value="Send message">
+            </form>
+        </div>
+    </div>
+{% endblock %}

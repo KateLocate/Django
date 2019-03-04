@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="headerMain_admin">
+    <div id="menu">
+        <a href="{% url 'main:index' %}">main page</a><
+        <a href="{% url 'admin:index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">
+            users
+        </a>
+        <a href="{% url 'admin:categories' %}"
+           class="{% if request.resolver_match.url_name == 'categories' or objects.0.category.name %}active{% endif %}">
+            categories{% if objects.0.category %}:<span>{{ objects.0.category.name }}</span>{% endif %}
+        </a>
+    </div>
+</div>

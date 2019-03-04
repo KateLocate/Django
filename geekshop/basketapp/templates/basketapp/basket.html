@@ -1,0 +1,14 @@
+{% extends 'basketapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+{{ title|title }}
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="basket_list">
+            {% include 'basketapp/includes/inc__basket_list.html' %}
+        </div>
+    </div>
+{% endblock %}
