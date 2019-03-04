@@ -1,0 +1,510 @@
+@font-face{
+    font-family: "20th Century Font";
+    src: url("../fonts_icons/20th_Century_Font.ttf");
+}
+
+body{
+    font: 17px "20th Century Font", Arial;
+    margin: 0;
+    padding: 0;
+    background: rgba(206,255,243,0.51)
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.headerMain{
+    position: relative;
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    margin-top: -175px;
+    margin-left: -90px;
+    width: 1349px;
+    height: 650px;
+    background: url('/static/images/header.jpg');
+    background-size: cover;
+
+}
+
+#logo{
+    margin-left: 50px;
+    display: inline-block;
+    text-align: center;
+    font: bolder 25px "20th Century Font", Arial;
+    text-shadow: 2px 2px 2px white;
+}
+
+#logo img{
+    margin-top: 30px;
+    margin-bottom: -35px;
+    max-height: 70px;
+}
+
+#greeting{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    background-color: rgba(204,232,255,0.8);
+    padding-top: 50px;
+    text-shadow: 1px 1px 1px white;
+    margin-left: 70px;
+}
+
+#menu {
+    position: absolute;
+    right: 55px;
+    top: 100px;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+}
+
+#menu a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: white;
+    float: left;
+}
+
+#menu a:hover {
+    color: rgba(221,231,253,0.99);
+}
+
+.icons{
+    position: absolute;
+    right: 55px;
+    top: 50px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.icons a {
+    margin-right: 10px;
+    color: white;
+    float: left;
+}
+
+.headerMain .stockButton{
+    position: absolute;
+    right: 150px;
+    top: 320px;
+    display: inline-block;
+    background: azure;
+    height: auto;
+    width: 130px;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+}
+
+.headerMain .stockButton:hover{
+    background: rgba(221,231,253,0.8);
+}
+
+#stock{
+    position: absolute;
+    right: 150px;
+    top: 137px;
+    text-align: center;
+    background-color: rgba(221,231,253,0.7);
+    display: inline-block;
+    color: #0d6f98;
+    margin-top: 20px;
+    padding-top: 40px;
+    text-shadow: 1px 1px 1px white;
+}
+
+.main{
+    min-height: 830px;
+    width: 100%;
+    float: left;
+}
+
+.main .left{
+    width: 270px;
+    float: left;
+}
+
+.main .left img{
+    max-width: 250px;
+    margin-top: 50px;
+    border: 10px solid white;
+}
+
+.main .button{
+    height: 66px;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(99,255,193,0.31);
+    text-shadow: 2px 2px 2px white;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.active{
+  color: rgba(109,205,193,0.91);
+  text-shadow: 1px 1px 1px black;
+}
+
+.main .right{
+    width: 870px;
+    margin-top: -40px;
+    float: right;
+    padding-bottom: 30px;
+}
+
+.product{
+    margin-right: 20px;
+    height: 370px;
+    width: 270px;
+    margin-top: 20px;
+    display: inline-block;
+    background: azure;
+    text-align: right;
+    float: left;
+}
+
+.product:nth-of-type(3n){
+    margin-right: 0;
+    height: 370px;
+    width: 270px;
+    margin-top: 20px;
+    display: inline-block;
+    background: azure;
+    text-align: right;
+}
+
+.product:hover{
+    background: rgba(221,231,253,0.5);
+}
+
+.product p{
+    font: italic 17px "20th Century Font", Arial;
+    margin-right: 10px;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.product img{
+    display: block;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    max-height: 300px;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.main h1{
+    margin: 20px 0 5px 0;
+    padding: 30px 30px 30px 30px;
+    display: inline-block;
+    width: 91%;
+    background: white;
+}
+
+.mainInside{
+    width: 1170px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.brands{
+    width: 100%;
+    float: left;
+    background: white;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.brands img{
+    width: 12%;
+}
+
+.insta{
+    margin-top: 30px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.insta_img{
+    margin-bottom: 50px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    text-align: center;
+
+}
+
+.insta_img img{
+    max-width: 170px;
+    border: 7px solid white;
+}
+
+.otherLinks {
+    width: 100%;
+    float: left;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.otherLinks a{
+    width: 33.333333%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+#pi{
+    background: #d82f20;
+}
+
+#fb{
+    background: #5374ca;
+}
+
+#tw{
+    background: #87ede0;
+}
+
+.footer{
+    width: 100%;
+    float: left;
+    height: 350px;
+    background: #373737;
+    color: #fff;
+    font: 12px Arial;
+}
+
+.map{
+    width: 1170px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 43px;
+    box-sizing: border-box;
+}
+
+.map a{
+    color: white;
+    line-height: 12px;
+}
+
+.map div{
+    margin-top: 20px;
+    width: 130px;
+    display: inline-block;
+    float: left;
+}
+
+#newsletter{
+    width: 250px;
+    line-height: 20px;
+}
+
+#about_us {
+    width: 250px;
+    text-justify: auto;
+    text-align: justify;
+}
+
+h2{
+    margin-top: -12px;
+}
+
+#menu i{
+    margin-top: -20px;
+}
+
+
+#copyright{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+#copyright a{
+    margin-right: 15px;
+    color: white;
+}
+
+#copyright p{
+    width: 81%;
+    float: left;
+    padding-bottom: 10px;
+}
+
+.container {
+    padding-top: 150px;
+    margin-bottom: 50px;
+    max-width: 450px;
+}
+
+.user_avatar{
+    display: block;
+    padding: 20px 20px 20px 20px;
+}
+
+.user_avatar img{
+    max-width: 100px;
+    max-height: 70px;
+}
+
+.active{
+    background-color: white;
+}
+
+.basket_list img{
+    max-height: 150px;
+    margin-bottom: 50px;
+}
+
+.basket_list input[type="number"] {
+    width: 3em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.category_name {
+    margin-left: 2em;
+    width: 5em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.product_name {
+    margin-left: 1em;
+    width: 8em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.product_price {
+    margin-left: 1em;
+    width: 7em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.product_cost {
+    margin-left: 1em;
+    width: 7em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list h2{
+    margin-top: 150px;
+    margin-left: 80px;
+}
+
+.basket_list{
+    text-align: center;
+    min-height: 900px;
+    width: 74%;
+    align: center;
+    float: left;
+    margin-bottom: 50px;
+    margin-left: 110px;
+}
+
+.product_right img{
+    max-height: 500px;
+    padding-left: 50px;
+    float: left;
+}
+
+.buy-button{
+    display: inline-block;
+    background: azure;
+    height: auto;
+    width: 130px;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+    margin-bottom: 50px;
+}
+
+.description{
+    margin-right: 50px;
+    text-align: right;
+}
+
+.text-center h2{
+    padding-top: 150px;
+}
+
+.user_record img{
+    max-height: 200px;
+}
+
+.product_record img{
+    max-height: 200px;
+}
+
+.user_record {
+    float:left;
+    margin-left: 50px;
+}
+
+.product_record {
+    float:left;
+    margin-left: 20px;
+}
+
+.users_list a{
+    margin-left: 15px;
+}
+
+.categories_list a{
+    margin: 0px 0px 10px 5px;
+}
+
+.category_record{
+    margin: 25px 25px 25px 25px;
+}
+
+.headerMain_admin a{
+    padding: 10px 10px 10px 10px;
+}
+
+.headerMain_admin{
+    font: 25px "20th Century Font", Arial;
+}
+
+.headerMain_admin .active{
+    background: azure;
+}
+
+.not_active{
+    opacity: 0.3;
+}
